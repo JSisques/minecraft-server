@@ -12,7 +12,7 @@ services:
       EULA: "TRUE"
       TYPE: "FORGE"
       ONLINE_MODE: "true"
-      Memory: "2G"
+      Memory: "3G"
       SEED: 34488218
       MOTD: "Recordad portaros bien muchachos"
       DIFFICULTY: "normal"
