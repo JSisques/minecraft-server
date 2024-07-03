@@ -30,6 +30,7 @@ services:
       VIEW_DISTANCE: 10
       MODE: "survival"
       SERVER_NAME: "Niños con cancer"
+      ALLOW_FLIGHT: "TRUE"
     tty: true
     stdin_open: true
     restart: unless-stopped
