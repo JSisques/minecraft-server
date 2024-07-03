@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  minecraftserver:
+    image: itzg/minecraft-server
+    container_name: minecraft-server
+    volumes:
+      - ./data:/data
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      ONLINE_MODE: "false"
+      Memory: "2G"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
