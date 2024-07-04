@@ -7,6 +7,7 @@ services:
     volumes:
       - ./data:/data
       - ./minecraft-server-mods.txt:/data/minecraft-server-mods.txt
+      - ./.env:/data/.env.txt
     ports:
       - 25565:25565
     environment:
@@ -33,6 +34,7 @@ services:
       SERVER_NAME: "Niños con cancer"
       ALLOW_FLIGHT: "TRUE"
       MODS_FILE: "/data/minecraft-server-mods.txt"
+      CF_API_KEY: ${CF_API_KEY}
     tty: true
     stdin_open: true
     restart: unless-stopped
