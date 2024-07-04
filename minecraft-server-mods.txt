@@ -1,6 +1,6 @@
 # Embeddium
 #https://www.curseforge.com/minecraft/mc-mods/embeddium
-https://www.curseforge.com/minecraft/mc-mods/embeddium/files/5496994
+Embeddium
 # Chunkpregenerator
 #https://www.curseforge.com/minecraft/mc-mods/chunkpregenerator
 # Clumps
