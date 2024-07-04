@@ -13,7 +13,7 @@ services:
       TYPE: "FORGE"
       ONLINE_MODE: "true"
       Memory: "3G"
-      SEED: 34488218
+      #SEED: 34488218
       MOTD: "Recordad portaros bien muchachos"
       DIFFICULTY: "normal"
       OPS: "bunno6661"
@@ -27,10 +27,11 @@ services:
       SPAWN_ANIMALS: "true"
       SPAWN_MONSTERS: "true"
       SPAWN_NPCS: "true"
-      VIEW_DISTANCE: 10
+      VIEW_DISTANCE: 6
       MODE: "survival"
       SERVER_NAME: "Niños con cancer"
       ALLOW_FLIGHT: "TRUE"
+      MODS_FILE: "./minecraft-server-mods.txt"
     tty: true
     stdin_open: true
     restart: unless-stopped
