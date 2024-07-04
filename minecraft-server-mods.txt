@@ -1,8 +1,8 @@
 # Embeddium
 https://www.curseforge.com/minecraft/mc-mods/embeddium
 # Chunkpregenerator
-https://www.curseforge.com/minecraft/mc-mods/chunkpregenerator
+#https://www.curseforge.com/minecraft/mc-mods/chunkpregenerator
 # Clumps
-https://www.curseforge.com/minecraft/mc-mods/clumps
+#https://www.curseforge.com/minecraft/mc-mods/clumps
 # Memoryleakfix
-https://www.curseforge.com/minecraft/mc-mods/memoryleakfix
+#https://www.curseforge.com/minecraft/mc-mods/memoryleakfix
