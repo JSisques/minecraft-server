@@ -35,7 +35,6 @@ services:
       ALLOW_FLIGHT: "TRUE"
       MODS_FILE: "/data/minecraft-server-mods.txt"
       CF_API_KEY: ${CF_API_KEY}
-      REMOVE_OLD_MODS: "true"
     tty: true
     stdin_open: true
     restart: unless-stopped
