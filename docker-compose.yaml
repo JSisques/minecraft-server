@@ -6,6 +6,7 @@ services:
     container_name: minecraft-server
     volumes:
       - ./data:/data
+      - ./minecraft-server-mods.txt:/data/minecraft-server-mods.txt
     ports:
       - 25565:25565
     environment:
@@ -31,7 +32,7 @@ services:
       MODE: "survival"
       SERVER_NAME: "Niños con cancer"
       ALLOW_FLIGHT: "TRUE"
-      MODS_FILE: "./minecraft-server-mods.txt"
+      MODS_FILE: "/data/minecraft-server-mods.txt"
     tty: true
     stdin_open: true
     restart: unless-stopped
