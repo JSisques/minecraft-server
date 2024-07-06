@@ -35,7 +35,7 @@ services:
       SPAWN_ANIMALS: "true"
       SPAWN_MONSTERS: "true"
       SPAWN_NPCS: "true"
-      VIEW_DISTANCE: 6
+      VIEW_DISTANCE: 12
       MODE: "survival"
       SERVER_NAME: "Niños con cancer"
       ALLOW_FLIGHT: "TRUE"
