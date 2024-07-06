@@ -2,17 +2,20 @@ version: "3"
 
 services:
   minecraftserver:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:stable
     container_name: minecraft-server
     volumes:
       - ./data:/data
       - ./minecraft-server-mods.txt:/data/minecraft-server-mods.txt
       - ./.env:/data/.env.txt
+      - ./mods:/data/mods
     ports:
       - 25565:25565
     environment:
+      VERSION: "1.21.0"
       EULA: "TRUE"
-      TYPE: "FORGE"
+      TYPE: "NEOFORGE"
+      NEOFORGE_VERSION: "beta"
       ONLINE_MODE: "true"
       Memory: "3G"
       #SEED: 34488218
