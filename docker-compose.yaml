@@ -17,9 +17,12 @@ services:
       TYPE: "NEOFORGE"
       NEOFORGE_VERSION: "beta"
       ONLINE_MODE: "true"
-      Memory: "3G"
-      #SEED: 34488218
+      MEMORY: "3G"
+      INIT_MEMORY: "3G"
+      MAX_MEMORY: "3G"
+      SEED: 13790671
       MOTD: "Recordad portaros bien muchachos"
+      MAX_PLAYERS: 5
       DIFFICULTY: "normal"
       OPS: "bunno6661"
       EXISTING_OPS_FILE: "SYNCHRONIZE"
