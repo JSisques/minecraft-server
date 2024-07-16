@@ -112,6 +112,14 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más 
 
 ---
 
+## 🗃️ Referencias
+
+- **Imagen en Docker Hub:** [itzg/minecraft-server](https://hub.docker.com/r/itzg/minecraft-server)
+- **Documentación oficial:** [docker-minecraft-server](https://docker-minecraft-server.readthedocs.io/en/latest/)
+- **Repositorio original:** Este repositorio se basa en el proyecto [itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server).
+
+---
+
 ## 🎮 Disfruta del juego
 
 ¡Eso es todo! Ahora ya tienes tu propio servidor de Minecraft en marcha. Conéctate y disfruta de la experiencia junto a tus amigos.
