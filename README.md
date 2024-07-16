@@ -48,13 +48,33 @@ chmod +x scripts/setup.sh
 ./scripts/setup.sh
 ```
 
-3. **Levantar el servidor con Docker Compose:**
+---
+
+## 🏃‍♂️ Iniciar el Servidor
+
+Para poner en funcionamiento el servidor de Minecraft, sigue estos simples pasos:
+
+1. Desde tu terminal, asegúrate de estar en el directorio principal del repositorio clonado:
+
+```sh
+cd ~/minecraft-server
+```
+
+2. Ejecuta el siguiente comando para iniciar el servidor en segundo plano:
 
 ```sh
 docker-compose up -d
 ```
 
----
+Este comando iniciará el contenedor del servidor de Minecraft. Podrás acceder al servidor a través del puerto 25565 de tu máquina.
+
+3. Verifica el estado del servidor para asegurarte de que esté ejecutándose correctamente:
+
+```sh
+docker ps -f name=minecraft-server
+```
+
+Este comando te mostrará el estado del contenedor y confirmará que está en funcionamiento.
 
 ## ⚙️ Configuración
 
