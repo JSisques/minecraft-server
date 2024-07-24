@@ -14,6 +14,15 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.1.0] - 2024-07-24
+
+### Añadido
+
+- Ejemplo de variables de entorno
+- Script para realizar copias de seguridad
+
+---
+
 ## [1.0.0] - 2024-07-16
 
 ### Añadido
