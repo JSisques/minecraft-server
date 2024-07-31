@@ -14,6 +14,14 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.2.0] - 2024-07-31
+
+### Cambiado
+
+- Script para borrar las copias de seguridad de más de 7 días
+
+---
+
 ## [1.1.0] - 2024-07-24
 
 ### Añadido
