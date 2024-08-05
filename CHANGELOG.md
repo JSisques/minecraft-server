@@ -14,6 +14,22 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.2.1] - 2024-08-05
+
+### Añadido
+
+- Apartado en el README.md para montar una carpeta en red
+
+### Cambiado
+
+- Script para realizar copias de seguridad a 2 días
+
+### Quitado
+
+- Script para purgar Docker
+
+---
+
 ## [1.2.0] - 2024-07-31
 
 ### Cambiado

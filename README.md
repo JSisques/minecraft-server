@@ -119,6 +119,97 @@ Para añadir cualquier mod, descarga su archivo .jar para NeoForge y colócalo e
 
 ---
 
+## 📂 Montar y Desmontar una Carpeta Compartida desde un Servidor QNAP en Raspberry Pi
+
+### Prerrequisitos
+
+- Raspberry Pi con sistema operativo basado en Debian (como Raspberry Pi OS).
+- Servidor QNAP con una carpeta compartida configurada.
+- Conexión de red entre la Raspberry Pi y el servidor QNAP.
+
+### Instalación y Configuración
+
+#### Paso 1: Preparar el Servidor QNAP
+
+1. Accede a la interfaz web de tu QNAP.
+
+2. Verifica la configuración de la carpeta compartida:
+
+- Ve a Control Panel > Privilege Settings > Shared Folders.
+- Asegúrate de que la carpeta que deseas montar está compartida y de que tienes permisos para acceder a ella.
+
+3. Anota las credenciales necesarias:
+
+- Nombre de usuario y contraseña para acceder a la carpeta compartida.
+
+#### Paso 2: Configurar la Raspberry Pi
+
+1. Actualizar el sistema y instalar paquetes necesarios:
+
+- Abre una terminal en tu Raspberry Pi y ejecuta:
+
+```bash
+sudo apt-get update
+sudo apt-get install cifs-utils
+```
+
+2. Crear un punto de montaje:
+
+Decide dónde montarás la carpeta compartida. Por ejemplo, para crear un punto de montaje en /mnt/qnap_share, ejecuta:
+
+```bash
+sudo mkdir /mnt/qnap_share
+```
+
+#### Paso 3: Montar la Carpeta Compartida
+
+1. Montar la carpeta usando el comando mount:
+
+Sustituye IP_DEL_QNAP, nombre_de_carpeta, usuario y contraseña con los valores correspondientes:
+
+```bash
+sudo mount -t cifs //IP_DEL_QNAP/nombre_de_carpeta /mnt/qnap_share -o user=usuario,password=contraseña
+```
+
+Ejemplo:
+
+```bash
+sudo mount -t cifs //192.168.1.100/shared_folder /mnt/qnap_share -o user=myuser,password=mypassword
+```
+
+2. Verificar el montaje:
+   Puedes verificar que la carpeta se ha montado correctamente con:
+
+```bash
+df -h
+```
+
+O
+
+```bash
+mount | grep /mnt/qnap_share
+```
+
+#### Paso 4: Configuración de Montaje Automático (Opcional)
+
+1. Editar el archivo /etc/fstab:
+
+Añade la siguiente línea al final del archivo para montar automáticamente la carpeta en cada inicio del sistema:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Añade la línea:
+
+```bash
+//IP_DEL_QNAP/nombre_de_carpeta /mnt/qnap_share cifs username=usuario,password=contraseña,iocharset=utf8 0 0
+```
+
+Guarda el archivo y cierra el editor (Ctrl+X, luego Y y Enter).
+
+---
+
 ## 📜 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
@@ -129,6 +220,7 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más 
 
 - Nombre: Javier Plaza Sisqués
 - GitHub: [JSisques](https://github.com/JSisques)
+- LinkedIn: [Javier Plaza Sisqués](https://www.linkedin.com/in/javier-plaza-sisqu%C3%A9s-b79367172)
 
 ---
 

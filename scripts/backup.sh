@@ -15,8 +15,8 @@ tar -zcvf $BACKUP_DIR/$BACKUP_FILE -C $SOURCE_DIR .
 # Imprimir mensaje de éxito
 echo "Copia de seguridad realizada con éxito: $BACKUP_DIR/$BACKUP_FILE"
 
-# Eliminar copias de seguridad que tengan más de 7 días
-find $BACKUP_DIR -name "*.tar.gz" -type f -mtime +7 -exec rm -f {} \;
+# Eliminar copias de seguridad que tengan más de 2 días
+find $BACKUP_DIR -name "*.tar.gz" -type f -mtime +2 -exec rm -f {} \;
 
 # Imprimir mensaje de limpieza de copias antiguas
-echo "Copias de seguridad de más de 7 días eliminadas."
+echo "Copias de seguridad de más de 2 días eliminadas."
