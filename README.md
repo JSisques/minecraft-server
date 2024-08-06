@@ -15,12 +15,12 @@ Este proyecto tiene como objetivo facilitar la creación y administración de un
   - **setup.sh**: Script para instalar todo lo necesario y poner en marcha el servidor en sistemas Unix.
 - **mods/**: Carpeta con los mods incluidos para mejorar el rendimiento del servidor:
   - betterfpsdist-1.21-4.5
-  - Clumps-neoforge-1.21-18.0.0.1
+  - Clumps-neoforge-1.21-18.0.0.2
   - cupboard-1.21-2.7
   - embeddium-1.0.4+mc1.21
   - ferritecore-7.0.0-neoforge
   - ImmediatelyFast-NeoForge-1.2.18+1.21
-  - modernfix-neoforge-5.18.5+mc1.21
+  - modernfix-neoforge-5.19.0+mc1.21
   - spark-1.10.73-neoforge
 
 ---

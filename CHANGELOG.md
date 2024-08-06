@@ -14,6 +14,15 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.2.2] - 2024-08-06
+
+### Cambiado
+
+- Mods actualizados a su ultima versión
+- Mods añadidos al README.md
+
+---
+
 ## [1.2.1] - 2024-08-05
 
 ### Añadido
