@@ -14,6 +14,25 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.2.3] - 2024-08-07
+
+### Añadido
+
+- Fichero para gestionar las variables de entorno
+
+### Cambiado
+
+- Docker Compose modificado para obtener las variables de entorno
+- Docker Compose modificado para quitar la referencia al fichero de texto de mods
+- Docker Compose modificado para añadir un hostname al contenedor
+- Fichero de variables de entorno de ejemplo
+
+### Quitado
+
+- Fichero de texto con el listado de mods
+
+---
+
 ## [1.2.2] - 2024-08-06
 
 ### Cambiado

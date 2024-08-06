@@ -4,43 +4,41 @@ services:
   minecraftserver:
     image: itzg/minecraft-server:stable
     container_name: minecraft-server
+    hostname: minecraft-server
     volumes:
       - ./data:/data
-      - ./minecraft-server-mods.txt:/data/minecraft-server-mods.txt
-      - ./.env:/data/.env.txt
+      - ./.env:/data/.env
       - ./mods:/data/mods
     ports:
       - 25565:25565
     environment:
-      VERSION: "1.21.0"
-      EULA: "TRUE"
-      TYPE: "NEOFORGE"
-      NEOFORGE_VERSION: "beta"
-      ONLINE_MODE: "true"
-      MEMORY: "3G"
-      INIT_MEMORY: "3G"
-      MAX_MEMORY: "3G"
-      #SEED: 13790671
-      MOTD: "Recordad portaros bien muchachos"
-      MAX_PLAYERS: 5
-      DIFFICULTY: "normal"
-      OPS: "bunno6661, liixxn, roberechev"
-      EXISTING_OPS_FILE: "SYNCHRONIZE"
-      ICON: "https://i.pinimg.com/originals/7b/4f/5f/7b4f5fb2785f755a831f3697517abe41.png"
-      ALLOW_NETHER: "true"
-      ANNOUNCE_PLAYER_ACHIEVEMENTS: "true"
-      GENERATE_STRUCTURES: "true"
-      HARDCORE: "false"
-      SNOOPER_ENABLED: "false"
-      SPAWN_ANIMALS: "true"
-      SPAWN_MONSTERS: "true"
-      SPAWN_NPCS: "true"
-      VIEW_DISTANCE: 6
-      MODE: "survival"
-      SERVER_NAME: "Niños con cancer"
-      ALLOW_FLIGHT: "TRUE"
-      #MODS_FILE: "/data/minecraft-server-mods.txt"
-      CF_API_KEY: "${CF_API_KEY}"
+      VERSION: ${VERSION}
+      EULA: ${EULA}
+      TYPE: ${TYPE}
+      NEOFORGE_VERSION: ${NEOFORGE_VERSION}
+      ONLINE_MODE: ${ONLINE_MODE}
+      MEMORY: ${MEMORY}
+      INIT_MEMORY: ${INIT_MEMORY}
+      MAX_MEMORY: ${MAX_MEMORY}
+      #SEED: ${SEED}
+      MOTD: ${MOTD}
+      MAX_PLAYERS: ${MAX_PLAYERS}
+      DIFFICULTY: ${DIFFICULTY}
+      OPS: ${OPS}
+      EXISTING_OPS_FILE: ${EXISTING_OPS_FILE}
+      ICON: ${ICON}
+      ALLOW_NETHER: ${ALLOW_NETHER}
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: ${ANNOUNCE_PLAYER_ACHIEVEMENTS}
+      GENERATE_STRUCTURES: ${GENERATE_STRUCTURES}
+      HARDCORE: ${HARDCORE}
+      SNOOPER_ENABLED: ${SNOOPER_ENABLED}
+      SPAWN_ANIMALS: ${SPAWN_ANIMALS}
+      SPAWN_MONSTERS: ${SPAWN_MONSTERS}
+      SPAWN_NPCS: ${SPAWN_NPCS}
+      VIEW_DISTANCE: ${VIEW_DISTANCE}
+      MODE: ${MODE}
+      SERVER_NAME: ${SERVER_NAME}
+      ALLOW_FLIGHT: ${ALLOW_FLIGHT}
     tty: true
     stdin_open: true
     restart: unless-stopped
