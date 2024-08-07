@@ -14,6 +14,16 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.3.0] - 2024-mm-dd
+
+### Añadido
+
+### Cambiado
+
+### Quitado
+
+---
+
 ## [1.2.4] - 2024-08-08
 
 ### Cambiado
