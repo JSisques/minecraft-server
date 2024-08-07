@@ -14,6 +14,14 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.2.4] - 2024-08-08
+
+### Cambiado
+
+- Fichero README para referenciar la licencia
+
+---
+
 ## [1.2.3] - 2024-08-07
 
 ### Añadido
