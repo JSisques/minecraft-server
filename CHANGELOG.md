@@ -18,7 +18,13 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ### Añadido
 
+- Script para montar volúmenes en red
+- Configuraciones de crontab en el script de instalación setup.sh
+
 ### Cambiado
+
+- Proceso de instalación de Docker en el archivo setup.sh
+- Proceso de instalación de Docker-Compose en el archivo setup.sh
 
 ### Quitado
 
