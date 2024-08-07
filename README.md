@@ -212,7 +212,7 @@ Guarda el archivo y cierra el editor (Ctrl+X, luego Y y Enter).
 
 ## 📜 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la GNU GENERAL PUBLIC LICENSE Version 3. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
 
 ---
 
