@@ -14,6 +14,22 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
+## [1.3.0] - 2024-mm-dd
+
+### Añadido
+
+- Script para montar volúmenes en red
+- Configuraciones de crontab en el script de instalación setup.sh
+
+### Cambiado
+
+- Proceso de instalación de Docker en el archivo setup.sh
+- Proceso de instalación de Docker-Compose en el archivo setup.sh
+
+### Quitado
+
+---
+
 ## [1.2.4] - 2024-08-08
 
 ### Cambiado
