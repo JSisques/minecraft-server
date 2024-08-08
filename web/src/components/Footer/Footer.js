@@ -85,20 +85,12 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link
-            color="gray.400"
-            href="#blog"
-            href="https://creative-tim.com/blog"
-          >
+          <Link color="gray.400" href="https://creative-tim.com/blog">
             {document.documentElement.dir === "rtl" ? "مدونة" : "Blog"}
           </Link>
         </ListItem>
         <ListItem>
-          <Link
-            color="gray.400"
-            href="#license"
-            href="https://www.creative-tim.com/license"
-          >
+          <Link color="gray.400" href="https://www.creative-tim.com/license">
             {document.documentElement.dir === "rtl" ? "رخصة" : "License"}
           </Link>
         </ListItem>
