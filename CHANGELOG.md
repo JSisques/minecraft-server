@@ -22,6 +22,7 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 - Configuraciones de crontab en el script de instalación setup.sh
 - Script de Python para exportar métricas del servidor de Minecraft
 - Script para establecer como servicio la exportación de métricas de Minecraft
+- Script para instalar el servidor de Minecraft en sistemas Windows
 
 ### Cambiado
 
