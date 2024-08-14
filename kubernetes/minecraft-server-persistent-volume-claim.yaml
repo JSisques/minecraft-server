@@ -1,0 +1,14 @@
+# Define un PersistentVolumeClaim llamado 'minecraft-nfs-pvc' en el namespace 'minecraft-server'.
+# Este PVC solicita almacenamiento del PersistentVolume previamente definido.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: minecraft-nfs-pvc
+  namespace: minecraft-server
+spec:
+  accessModes:
+    - ReadWriteMany # Modo de acceso: muchos contenedores pueden leer y escribir
+  resources:
+    requests:
+      storage: 10Gi # Solicita 10 GiB de almacenamiento
+  storageClassName: manual # Clase de almacenamiento utilizada (debe coincidir con la del PV)

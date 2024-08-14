@@ -1,0 +1,5 @@
+# Define un namespace llamado 'minecraft-server' para aislar los recursos de Kubernetes.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minecraft-server

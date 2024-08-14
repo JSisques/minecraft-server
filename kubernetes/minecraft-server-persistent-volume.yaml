@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: minecraft-pv
+  namespace: minecraft-server
+spec:
+  capacity:
+    storage: 10Gi # Capacidad total del volumen
+  accessModes:
+    - ReadWriteMany # Modo de acceso: múltiples pods pueden leer y escribir
+  hostPath:
+    path: "/mnt/data/minecraft-server" # Ruta en el escritorio de Windows
+  storageClassName: manual # Clase de almacenamiento
