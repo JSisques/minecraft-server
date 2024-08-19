@@ -1,0 +1,41 @@
+# Define un Deployment llamado 'minecraft-deployment' en el namespace 'minecraft-server'.
+# Este Deployment maneja la creación y administración del contenedor del servidor Minecraft.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minecraft-deployment
+  namespace: minecraft-server
+spec:
+  replicas: 1 # Número de réplicas del contenedor
+  selector:
+    matchLabels:
+      app: minecraft # Etiqueta utilizada para seleccionar el pod
+  template:
+    metadata:
+      labels:
+        app: minecraft
+    spec:
+      containers:
+        - name: minecraft-server
+          image: itzg/minecraft-server:stable # Imagen del contenedor del servidor Minecraft
+          ports:
+            - containerPort: 25565 # Puerto expuesto por el contenedor
+          volumeMounts:
+            - name: minecraft-storage
+              mountPath: /data # Ruta dentro del contenedor donde se montará el volumen
+          envFrom:
+            - configMapRef:
+                name: minecraft-config # Referencia al ConfigMap con las variables de entorno
+          tty: true
+          stdin: true
+          resources:
+            requests:
+              memory: "4Gi" # Memoria mínima solicitada para el contenedor
+              cpu: "500m" # CPU mínima solicitada (500 milliCPU = 0.5 CPU)
+            limits:
+              memory: "6Gi" # Memoria máxima permitida para el contenedor
+              cpu: "1" # CPU máxima permitida (1 CPU completo)
+      volumes:
+        - name: minecraft-storage
+          persistentVolumeClaim:
+            claimName: minecraft-nfs-pvc # Referencia al PersistentVolumeClaim

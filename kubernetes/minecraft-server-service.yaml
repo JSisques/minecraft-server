@@ -1,0 +1,15 @@
+# Define un Service llamado 'minecraft-service' en el namespace 'minecraft-server'.
+# Este Service expone el puerto del contenedor para que pueda ser accesible desde fuera del clúster.
+apiVersion: v1
+kind: Service
+metadata:
+  name: minecraft-service
+  namespace: minecraft-server
+spec:
+  type: NodePort # Tipo de servicio: expone el puerto en cada nodo
+  selector:
+    app: minecraft # Etiqueta utilizada para seleccionar el pod
+  ports:
+    - protocol: TCP
+      port: 25565 # Puerto del Service
+      targetPort: 25565 # Puerto del contenedor al que se redirige el tráfico
