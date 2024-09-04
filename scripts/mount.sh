@@ -106,15 +106,15 @@ else
 fi
 
 # Verificar si la entrada en /etc/fstab ya existe
-echo "Verificando si la entrada existe en /etc/fstab..."
-if grep -q "${FSTAB_ENTRY}" /etc/fstab; then
-    echo "La entrada ya existe en /etc/fstab."
-else
-    echo "La entrada no existe en /etc/fstab. Añadiéndola..."
-    if [ -n "$USUARIO" ]; then
-        echo "${FSTAB_ENTRY} -o username=${USUARIO},password=${CONTRASENA}" | sudo tee -a /etc/fstab > /dev/null
-    else
-        echo "${FSTAB_ENTRY}" | sudo tee -a /etc/fstab > /dev/null
-    fi
-    echo "Entrada añadida a /etc/fstab."
-fi
+# echo "Verificando si la entrada existe en /etc/fstab..."
+# if grep -q "${FSTAB_ENTRY}" /etc/fstab; then
+#     echo "La entrada ya existe en /etc/fstab."
+# else
+#     echo "La entrada no existe en /etc/fstab. Añadiéndola..."
+#     if [ -n "$USUARIO" ]; then
+#         echo "${FSTAB_ENTRY} -o username=${USUARIO},password=${CONTRASENA}" | sudo tee -a /etc/fstab > /dev/null
+#     else
+#         echo "${FSTAB_ENTRY}" | sudo tee -a /etc/fstab > /dev/null
+#     fi
+#     echo "Entrada añadida a /etc/fstab."
+# fi

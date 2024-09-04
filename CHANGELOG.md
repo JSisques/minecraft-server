@@ -14,7 +14,7 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ---
 
-## [1.3.0] - 2024-mm-dd
+## [1.3.0] - 2024-09-05
 
 ### Añadido
 
@@ -23,11 +23,14 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 - Script de Python para exportar métricas del servidor de Minecraft
 - Script para establecer como servicio la exportación de métricas de Minecraft
 - Script para instalar el servidor de Minecraft en sistemas Windows
+- Mod CarbonConfig-Neoforge-1.21-1.2.9.2
+- Mod Chunk-Pregenerator-Neoforge-1.21-4.4.5
 
 ### Cambiado
 
 - Proceso de instalación de Docker en el archivo setup.sh
 - Proceso de instalación de Docker-Compose en el archivo setup.sh
+- Proceso de realización de la copia de seguridad
 
 ### Quitado
 
