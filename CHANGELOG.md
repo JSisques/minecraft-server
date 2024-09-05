@@ -18,9 +18,8 @@ Todas las modificaciones significativas en el proyecto se registrarán en este a
 
 ### Cambiado
 
-- Proceso de instalación de Docker en el archivo setup.sh
-- Proceso de instalación de Docker-Compose en el archivo setup.sh
-- Proceso de realización de la copia de seguridad
+- Corregido el name del docker-compose
+- Corregido el montaje en red para las backups
 
 ## [1.3.0] - 2024-09-05
 
