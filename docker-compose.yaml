@@ -1,5 +1,5 @@
-version: "3"
-
+version: "3.8"
+name: minecraft-server
 services:
   minecraftserver:
     image: itzg/minecraft-server:stable
