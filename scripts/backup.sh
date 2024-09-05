@@ -26,7 +26,7 @@ mostrar_ayuda() {
 }
 
 # Procesar los parámetros
-while [[ "$#" -gt 0 ]]; do
+while [ "$#" -gt 0 ]; do
     case $1 in
         -server) SERVER="$2"; shift ;;
         -folder) FOLDER="$2"; shift ;;
@@ -43,6 +43,12 @@ done
 # Crear directorio de respaldo si no existe
 mkdir -p $BACKUP_DIR
 
+# Función para comprobar si el volumen ya está montado
+verificar_montaje() {
+    mountpoint -q "$MOUNTPOINT"
+    return $?
+}
+
 # Montar el volumen en red si se especificó -m y todos los parámetros necesarios están presentes
 if [ "$MOUNT" = true ]; then
     if [ -z "$SERVER" ] || [ -z "$FOLDER" ]; then
@@ -50,25 +56,33 @@ if [ "$MOUNT" = true ]; then
         exit 1
     fi
 
-    echo "Montando el volumen en red..."
-    MOUNT_CMD="sudo mount -t cifs //$SERVER/$FOLDER $MOUNTPOINT"
-    
-    if [ -n "$USER" ] && [ -n "$PASSWORD" ]; then
-        MOUNT_CMD+=" -o username=$USER,password=$PASSWORD"
-    fi
+    # Verificar si el volumen ya está montado
+    if verificar_montaje; then
+        echo "El volumen ya está montado en $MOUNTPOINT. No es necesario volver a montarlo."
+    else
 
-    # Ejecutar el comando de montaje
-    $MOUNT_CMD
+        echo "Montando el volumen en red..."
 
-    # Verificar si el montaje fue exitoso
-    if [ $? -ne 0 ]; then
-        echo "Error al montar el volumen en red."
-        exit 1
-    fi
+        # Construir el comando de montaje
+        if [ -n "$USER" ] && [ -n "$PASSWORD" ]; then
+            MOUNT_CMD="sudo mount -t cifs //$SERVER/$FOLDER $MOUNTPOINT -o username=$USER,password=$PASSWORD"
+        else
+            MOUNT_CMD="sudo mount -t cifs //$SERVER/$FOLDER $MOUNTPOINT"
+        fi
+
+        # Ejecutar el comando de montaje
+        $MOUNT_CMD
+
+        # Verificar si el montaje fue exitoso
+        if [ $? -ne 0 ]; then
+            echo "Error al montar el volumen en red."
+            exit 1
+        fi
     
-    # Recargar los servicios del sistema
-    sudo systemctl daemon-reload
-    echo "Volumen en red montado exitosamente en $MOUNTPOINT."
+        # Recargar los servicios del sistema
+        sudo systemctl daemon-reload
+        echo "Volumen en red montado exitosamente en $MOUNTPOINT."
+    fi
 fi
 
 # Realizar la copia de seguridad
